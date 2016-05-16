@@ -28,6 +28,7 @@ price = co.total
 
 Implement a checkout system that fullfills these requirements.
 
+## Test
 ```
 Test data
 ---------
@@ -39,4 +40,14 @@ Total price expected: £36.95
 
 Basket: 001,002,001,003
 Total price expected: £73.76
+```
+
+To run all the tests:
+```
+$ rspec
+```
+
+To run all the tests and see test coverage:
+```
+$ coveralls report
 ```
