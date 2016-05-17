@@ -6,13 +6,17 @@ describe Checkout do
   let(:personalised_cufflinks) { double(:product) }
 
   it 'starts with an empty basket' do
-    expect(co.show_basket).to be_empty
+    expect(co.basket).to be_empty
+  end
+
+  it 'starts with a total of 0.00' do
+    expect(co.total).to eq(0.00)
   end
 
   it 'can add products to basket' do
     co.scan(lavander_heart)
     co.scan(personalised_cufflinks)
-    expect(co.show_basket).to eq([lavander_heart, personalised_cufflinks])
+    expect(co.basket).to eq([lavander_heart, personalised_cufflinks])
   end
 
   it 'can calculate the total price of the basket' do

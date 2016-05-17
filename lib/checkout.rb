@@ -1,11 +1,9 @@
 class Checkout
+  attr_reader :basket
 
   def initialize
     @basket = []
-  end
-
-  def show_basket
-    @basket
+    @total = 0.00
   end
 
   def scan(item)
@@ -13,8 +11,7 @@ class Checkout
   end
 
   def total
-    total = 0
-    @basket.each { |item| total += item.price }
-    total
+    @basket.each { |item| @total += item.price }
+    @total
   end
 end
