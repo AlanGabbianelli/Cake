@@ -4,7 +4,7 @@ This is a checkout system written in Ruby, that allows you to add items to the b
 ## Installation
 To install it, fork this repo and clone it in your machine, then enter the directory and install all the dependencies with bundle (if you don't have bundle install it with `$ gem install bundle`).
 ```
-$ git@github.com:your_user_name/cake.git
+$ git clone git@github.com:your_user_name/cake.git
 $ cd cake
 $ bundle install
 ```
