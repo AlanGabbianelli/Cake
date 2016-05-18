@@ -1,4 +1,26 @@
-# Ruby Test
+# Checkout
+This is a checkout system written in Ruby, that allows you to add items to the basket, and calculates the total price. It also accepts promotions of various types, and calculates when to apply them.
+
+## Installation
+To install it, fork this repo and clone it in your machine, then enter the directory and install all the dependencies with bundle (if you don't have bundle install it with `$ gem install bundle`).
+```
+$ git@github.com:your_user_name/cake.git
+$ cd cake
+$ bundle install
+```
+
+## Test
+To run all the tests:
+```
+$ rspec
+```
+
+To run all the tests and see test coverage:
+```
+$ coveralls report
+```
+
+## Original Requirements
 
 Our client is an online marketplace, here is a sample of some of the products available on our site:
 
@@ -28,7 +50,6 @@ price = co.total
 
 Implement a checkout system that fullfills these requirements.
 
-## Test
 ```
 Test data
 ---------
@@ -40,14 +61,4 @@ Total price expected: £36.95
 
 Basket: 001,002,001,003
 Total price expected: £73.76
-```
-
-To run all the tests:
-```
-$ rspec
-```
-
-To run all the tests and see test coverage:
-```
-$ coveralls report
 ```
