@@ -1,6 +1,6 @@
-require 'product'
+require 'item'
 
-describe Product do
+describe Item do
   subject(:lavander_heart) { described_class.new(001, 'Lavander heart', 9.25) }
 
   it 'has a code' do

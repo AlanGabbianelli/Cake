@@ -2,8 +2,8 @@ require 'checkout'
 
 describe Checkout do
   subject(:co) { described_class.new }
-  let(:lavander_heart) { double(:product) }
-  let(:personalised_cufflinks) { double(:product) }
+  let(:lavander_heart) { double(:item) }
+  let(:personalised_cufflinks) { double(:item) }
 
   context 'without items' do
     it 'starts with an empty basket' do
