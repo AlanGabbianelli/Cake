@@ -1,7 +1,9 @@
 require 'checkout'
 
 describe Checkout do
-  subject(:checkout) { described_class.new }
+  subject(:checkout) { described_class.new([multibuy_promotion, percentage_promotion]) }
+  let(:multibuy_promotion) { double(:promotion) }
+  let(:percentage_promotion) { double(:promotion) }
   let(:lavander_heart) { double(:item) }
   let(:personalised_cufflinks) { double(:item) }
 

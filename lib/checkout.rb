@@ -1,7 +1,8 @@
 class Checkout
   attr_reader :basket, :subtotal
 
-  def initialize
+  def initialize(promotions)
+    @promotions = promotions
     @basket = Hash.new(0)
     @subtotal = 0.00
   end
