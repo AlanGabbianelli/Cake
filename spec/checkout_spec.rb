@@ -10,10 +10,6 @@ describe Checkout do
       expect(checkout.basket).to be_empty
     end
 
-    it 'starts with an empty order' do
-      expect(checkout.order).to be_empty
-    end
-
     it 'starts with a subtotal of 0.00' do
       expect(checkout.subtotal).to eq(0.00)
     end
@@ -29,12 +25,8 @@ describe Checkout do
       checkout.scan(personalised_cufflinks)
     end
 
-    it 'can add items to basket' do
-      expect(checkout.basket).to eq([lavander_heart, personalised_cufflinks])
-    end
-
-    it 'can update order with items\' codes and quantity' do
-      expect(checkout.order).to eq(001 => 1, 002 => 1)
+    it 'can update basket with items\' codes and quantity' do
+      expect(checkout.basket).to eq(001 => 1, 002 => 1)
     end
 
     it 'can calculate the subtotal of the basket' do

@@ -5,17 +5,17 @@ class MultibuyPromotion
     @discount_per_item = discount_per_item
   end
 
-  def apply(order)
-    promo_applicable?(order) ? applicable_discount(order) : 0.00
+  def apply(basket)
+    promo_applicable?(basket) ? applicable_discount(basket) : 0.00
   end
 
   private
 
-  def promo_applicable?(order)
-    order[@item_code] >= @required_quantity
+  def promo_applicable?(basket)
+    basket[@item_code] >= @required_quantity
   end
 
-  def applicable_discount(order)
-    order[@item_code] * @discount_per_item
+  def applicable_discount(basket)
+    basket[@item_code] * @discount_per_item
   end
 end
