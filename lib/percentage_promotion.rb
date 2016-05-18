@@ -5,7 +5,7 @@ class PercentagePromotion
   end
 
   def apply(current_total)
-    promo_applicable?(current_total) ? new_total(current_total) : current_total
+    promo_applicable?(current_total) ? applicable_discount(current_total) : 0.00
   end
 
   private
@@ -14,7 +14,7 @@ class PercentagePromotion
     current_total >= @minimum_amount
   end
 
-  def new_total(current_total)
-    current_total / 100 * (100 - @discount_percentage)
+  def applicable_discount(current_total)
+    current_total / 100.00 * @discount_percentage
   end
 end

@@ -6,7 +6,7 @@ class MultibuyPromotion
   end
 
   def apply(order)
-    promo_applicable?(order) ? applicable_discount(order) : 0
+    promo_applicable?(order) ? applicable_discount(order) : 0.00
   end
 
   private

@@ -12,6 +12,6 @@ describe MultibuyPromotion do
   end
 
   it 'is not applied when item quantity is less than required quantity' do
-    expect(multibuy_promotion.apply(001 => 1)).to eq(0)
+    expect(multibuy_promotion.apply(001 => 1)).to eq(0.00)
   end
 end
