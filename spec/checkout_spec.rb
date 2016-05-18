@@ -14,8 +14,8 @@ describe Checkout do
       expect(co.order).to be_empty
     end
 
-    it 'starts with a total of 0.00' do
-      expect(co.total).to eq(0.00)
+    it 'starts with a subtotal of 0.00' do
+      expect(co.subtotal).to eq(0.00)
     end
   end
 
@@ -37,8 +37,8 @@ describe Checkout do
       expect(co.order).to eq(001 => 1, 002 => 1)
     end
 
-    it 'can calculate the total price of the basket' do
-      expect(co.total).to eq(54.25)
+    it 'can calculate the subtotal of the basket' do
+      expect(co.subtotal).to eq(54.25)
     end
   end
 end
