@@ -30,6 +30,6 @@ class Checkout
   def update_total
     current_total = @subtotal
     @promotions.each { |promo| current_total -= promo.apply(basket, subtotal) }
-    @total = current_total
+    @total = current_total.round(2)
   end
 end
