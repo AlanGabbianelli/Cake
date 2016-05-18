@@ -5,7 +5,7 @@ class MultibuyPromotion
     @discount_per_item = discount_per_item
   end
 
-  def apply(basket)
+  def apply(basket, subtotal)
     promo_applicable?(basket) ? applicable_discount(basket) : 0.00
   end
 

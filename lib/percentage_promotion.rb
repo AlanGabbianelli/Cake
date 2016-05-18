@@ -4,17 +4,17 @@ class PercentagePromotion
     @discount_percentage = discount_percentage
   end
 
-  def apply(current_total)
-    promo_applicable?(current_total) ? applicable_discount(current_total) : 0.00
+  def apply(basket, subtotal)
+    promo_applicable?(subtotal) ? applicable_discount(subtotal) : 0.00
   end
 
   private
 
-  def promo_applicable?(current_total)
-    current_total >= @minimum_amount
+  def promo_applicable?(subtotal)
+    subtotal >= @minimum_amount
   end
 
-  def applicable_discount(current_total)
-    current_total / 100.00 * @discount_percentage
+  def applicable_discount(subtotal)
+    subtotal / 100.00 * @discount_percentage
   end
 end
