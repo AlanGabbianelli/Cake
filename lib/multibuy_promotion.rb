@@ -1,5 +1,5 @@
 class MultibuyPromotion
-  def initialize(item_code, required_quantity, discount_per_item)
+  def initialize(item_code: 001, required_quantity: 2, discount_per_item: 0.75)
     @item_code = item_code
     @required_quantity = required_quantity
     @discount_per_item = discount_per_item

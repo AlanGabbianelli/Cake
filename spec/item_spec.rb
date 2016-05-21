@@ -1,7 +1,7 @@
 require 'item'
 
 describe Item do
-  subject(:lavander_heart) { described_class.new(001, 'Lavander heart', 9.25) }
+  subject(:lavander_heart) { described_class.new }
 
   it 'has a code' do
     expect(lavander_heart.code).to eq(001)

@@ -1,7 +1,7 @@
 require 'multibuy_promotion'
 
 describe MultibuyPromotion do
-  subject(:multibuy_promotion) { described_class.new(001, 2, 0.75) }
+  subject(:multibuy_promotion) { described_class.new }
 
   it 'is applied when item quantity is equal to required quantity' do
     expect(multibuy_promotion.apply({ 001 => 2 }, 18.50)).to eq(1.50)

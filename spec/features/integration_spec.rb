@@ -4,16 +4,13 @@ require 'percentage_promotion'
 require 'checkout'
 
 describe 'Integration Spec' do
-  lavander_heart = Item.new(001, 'Lavender heart', 9.25)
-  personalised_cufflinks = Item.new(002, 'Personalised cufflinks', 45.00)
-  kids_t_shirt = Item.new(003, 'Kids T-shirt', 19.95)
+  lavander_heart = Item.new
+  personalised_cufflinks = Item.new(code: 002, name: 'Personalised cufflinks', price: 45.00)
+  kids_t_shirt = Item.new(code: 003, name: 'Kids T-shirt', price: 19.95)
 
-  multibuy_promotion = MultibuyPromotion.new(001, 2, 0.75)
-  percentage_promotion = PercentagePromotion.new(60.00, 10.00)
-
-  checkout_1 = Checkout.new([multibuy_promotion, percentage_promotion])
-  checkout_2 = Checkout.new([multibuy_promotion, percentage_promotion])
-  checkout_3 = Checkout.new([multibuy_promotion, percentage_promotion])
+  checkout_1 = Checkout.new
+  checkout_2 = Checkout.new
+  checkout_3 = Checkout.new
 
   it 'applies percentage promotion' do
     checkout_1.scan(lavander_heart)

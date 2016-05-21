@@ -1,5 +1,5 @@
 class PercentagePromotion
-  def initialize(minimum_amount, discount_percentage)
+  def initialize(minimum_amount: 60.00, discount_percentage: 10.00)
     @minimum_amount = minimum_amount
     @discount_percentage = discount_percentage
   end
