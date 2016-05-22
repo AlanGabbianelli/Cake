@@ -1,6 +1,8 @@
 # Checkout
 This is a checkout system written in Ruby, that allows you to add items to the basket, and calculates the total price. It also accepts promotions of various types, and calculates when to apply them.
 
+[![Coverage Status](https://coveralls.io/repos/github/AlanGabbianelli/Cake/badge.svg?branch=master)](https://coveralls.io/github/AlanGabbianelli/Cake?branch=master)
+
 ## Installation
 To install it, fork this repo and clone it in your machine, then enter the directory and install all the dependencies with bundle (if you don't have bundle install it with `$ gem install bundle`).
 ```
