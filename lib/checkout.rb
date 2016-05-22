@@ -4,8 +4,8 @@ class Checkout
   def initialize(promotions: [MultibuyPromotion.new, PercentagePromotion.new])
     @promotions = promotions
     @basket = Hash.new(0)
-    @subtotal = 0.00
-    @total = 0.00
+    @subtotal = 0
+    @total = 0
   end
 
   def scan(item)
@@ -30,6 +30,6 @@ class Checkout
   def update_total
     current_total = @subtotal
     @promotions.each { |promo| current_total -= promo.apply(basket, current_total) }
-    @total = current_total.round(2)
+    @total = current_total.round(2).to_f
   end
 end
