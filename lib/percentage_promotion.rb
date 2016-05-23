@@ -1,4 +1,4 @@
-class PercentagePromotion
+class PercentagePromotion # :nodoc:
   def initialize(minimum_amount: 60, discount_percentage: 10)
     @minimum_amount = minimum_amount.to_d
     @discount_percentage = discount_percentage

@@ -1,4 +1,4 @@
-class Checkout
+class Checkout # :nodoc:
   attr_reader :basket, :subtotal
 
   def initialize(promotions: [MultibuyPromotion.new, PercentagePromotion.new])

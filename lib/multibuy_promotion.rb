@@ -1,4 +1,4 @@
-class MultibuyPromotion
+class MultibuyPromotion # :nodoc:
   def initialize(item_code: 001, required_quantity: 2, discount_per_item: 0.75)
     @item_code = item_code
     @required_quantity = required_quantity
