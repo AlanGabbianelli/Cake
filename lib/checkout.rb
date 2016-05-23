@@ -5,7 +5,6 @@ class Checkout
     @promotions = promotions
     @basket = Hash.new(0)
     @subtotal = 0
-    @total = 0
   end
 
   def scan(item)
@@ -28,8 +27,8 @@ class Checkout
   end
 
   def update_total
-    current_total = @subtotal
-    @promotions.each { |promo| current_total -= promo.apply(basket, current_total) }
-    @total = current_total.round(2).to_f
+    total = @subtotal
+    @promotions.each { |promotion| total -= promotion.apply(basket, total) }
+    total.round(2).to_f
   end
 end
