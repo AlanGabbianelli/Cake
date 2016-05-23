@@ -25,6 +25,14 @@ To run all the tests and see test coverage:
 $ coveralls report
 ```
 
+## Future improvements
+* Use BigDecimal to  avoid rounding imprecision
+* Use keyword arguments (named parameters)
+* Catch errors (eg item code not valid)
+* Extract a Basket class to ease Checkout from logic
+* Make a Promotion class all promotion would inherit from (DRY)
+* Work out total and subtotal dynamically
+
 ## Original Requirements
 
 Our client is an online marketplace, here is a sample of some of the products available on our site:
