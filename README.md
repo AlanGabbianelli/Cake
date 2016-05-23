@@ -1,4 +1,4 @@
-# Checkout
+# Checkout System
 [![Build Status](https://travis-ci.org/AlanGabbianelli/Cake.svg?branch=master)](https://travis-ci.org/AlanGabbianelli/Cake)
 [![Coverage Status](https://coveralls.io/repos/github/AlanGabbianelli/Cake/badge.svg?branch=master)](https://coveralls.io/github/AlanGabbianelli/Cake?branch=master)
 [![Code Climate](https://codeclimate.com/github/AlanGabbianelli/Cake/badges/gpa.svg)](https://codeclimate.com/github/AlanGabbianelli/Cake)
@@ -14,16 +14,9 @@ $ cd cake
 $ bundle install
 ```
 
-## Test
-To run all the tests:
-```
-$ rspec
-```
-
-To run all the tests and see test coverage:
-```
-$ coveralls report
-```
+## Tests
+* To run all the tests: `$ rspec` or `$ rake`
+* To run all the tests and see test coverage: `$ coveralls report`
 
 ## Future improvements
 * Use BigDecimal to  avoid rounding imprecision
