@@ -3,6 +3,8 @@ This is a checkout system written in Ruby, that allows you to add items to the b
 
 [![Coverage Status](https://coveralls.io/repos/github/AlanGabbianelli/Cake/badge.svg?branch=master)](https://coveralls.io/github/AlanGabbianelli/Cake?branch=master)
 
+[![Build Status](https://travis-ci.org/AlanGabbianelli/Cake.svg?branch=master)](https://travis-ci.org/AlanGabbianelli/Cake)
+
 ## Installation
 To install it, fork this repo and clone it in your machine, then enter the directory and install all the dependencies with bundle (if you don't have bundle install it with `$ gem install bundle`).
 ```
