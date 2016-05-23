@@ -5,7 +5,7 @@ class MultibuyPromotion # :nodoc:
     @discount_per_item = discount_per_item.to_d
   end
 
-  def apply(basket, subtotal)
+  def apply(basket, _subtotal)
     promo_applicable?(basket) ? applicable_discount(basket) : 0
   end
 

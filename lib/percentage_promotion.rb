@@ -4,7 +4,7 @@ class PercentagePromotion # :nodoc:
     @discount_percentage = discount_percentage
   end
 
-  def apply(basket, subtotal)
+  def apply(_basket, subtotal)
     promo_applicable?(subtotal) ? applicable_discount(subtotal) : 0
   end
 
