@@ -1,7 +1,7 @@
 require 'checkout'
 
 describe Checkout do
-  subject(:checkout) { described_class.new([multibuy_promotion, percentage_promotion]) }
+  subject(:checkout) { described_class.new }
   let(:multibuy_promotion) { double(:promotion) }
   let(:percentage_promotion) { double(:promotion) }
   let(:lavander_heart) { double(:item) }
@@ -38,11 +38,12 @@ describe Checkout do
       before do
         allow(multibuy_promotion).to receive(:apply).and_return(0.00)
         allow(percentage_promotion).to receive(:apply).and_return(0.00)
+
         checkout.scan(lavander_heart)
         checkout.scan(personalised_cufflinks)
       end
 
-      it 'can update basket with items\' codes and quantity' do
+      it "can update basket with items' codes and quantity" do
         expect(checkout.basket).to eq(001 => 1, 002 => 1)
       end
 
@@ -59,6 +60,7 @@ describe Checkout do
       before do
         allow(multibuy_promotion).to receive(:apply).and_return(1.50)
         allow(percentage_promotion).to receive(:apply).and_return(0.00)
+
         checkout.scan(lavander_heart)
         checkout.scan(lavander_heart)
       end
@@ -72,6 +74,7 @@ describe Checkout do
       before do
         allow(multibuy_promotion).to receive(:apply).and_return(0.00)
         allow(percentage_promotion).to receive(:apply).and_return(9.00)
+
         checkout.scan(personalised_cufflinks)
         checkout.scan(personalised_cufflinks)
       end
@@ -85,6 +88,7 @@ describe Checkout do
       before do
         allow(multibuy_promotion).to receive(:apply).and_return(1.50)
         allow(percentage_promotion).to receive(:apply).and_return(10.70)
+
         checkout.scan(lavander_heart)
         checkout.scan(personalised_cufflinks)
         checkout.scan(lavander_heart)

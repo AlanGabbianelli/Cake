@@ -1,12 +1,12 @@
-class MultibuyPromotion
-  def initialize(item_code, required_quantity, discount_per_item)
+class MultibuyPromotion # :nodoc:
+  def initialize(item_code: 001, required_quantity: 2, discount_per_item: 0.75)
     @item_code = item_code
     @required_quantity = required_quantity
-    @discount_per_item = discount_per_item
+    @discount_per_item = discount_per_item.to_d
   end
 
-  def apply(basket, subtotal)
-    promo_applicable?(basket) ? applicable_discount(basket) : 0.00
+  def apply(basket, _subtotal)
+    promo_applicable?(basket) ? applicable_discount(basket) : 0
   end
 
   private

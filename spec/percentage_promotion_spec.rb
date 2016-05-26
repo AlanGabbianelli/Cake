@@ -1,9 +1,9 @@
 require 'percentage_promotion'
 
 describe PercentagePromotion do
-  subject(:percentage_promotion) { described_class.new(60.00, 10.00) }
+  subject(:percentage_promotion) { described_class.new }
 
-  it 'is applied when total is equal to minimum amount' do
+  it 'is applied when total is equal to minimum amount (60.00 by default)' do
     expect(percentage_promotion.apply({}, 60.00)).to eq(6.00)
   end
 
