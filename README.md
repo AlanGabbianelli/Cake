@@ -18,13 +18,13 @@ $ bundle install
 * To run all the tests: `$ rspec` or `$ rake`
 * To run all the tests and see test coverage: `$ coveralls report`
 
-## Future improvements
-* ~~Use BigDecimal to  avoid rounding imprecision~~
-* ~~Use keyword arguments (named parameters)~~
-* Catch errors (eg item code not valid)
-* Extract a Basket class to ease Checkout from logic
-* Make a Promotion class all promotions would inherit from (DRY)
-* Work out total and subtotal dynamically
+## Possible improvements
+* :white_check_mark: ~~Use BigDecimal to  avoid rounding imprecision~~
+* :white_check_mark: ~~Use keyword arguments (named parameters)~~
+* :white_medium_square: Catch errors (eg item code not valid)
+* :white_medium_square: Extract a Basket class to ease Checkout from logic
+* :white_medium_square: Make a Promotion class all promotions would inherit from (DRY)
+* :white_medium_square: Work out total and subtotal dynamically
 
 ## Original Requirements
 
