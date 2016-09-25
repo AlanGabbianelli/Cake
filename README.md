@@ -18,14 +18,6 @@ $ bundle install
 * To run all the tests: `$ rspec` or `$ rake`
 * To run all the tests and see test coverage: `$ coveralls report`
 
-## Possible improvements
-* :white_check_mark: ~~Use BigDecimal to  avoid rounding imprecision~~
-* :white_check_mark: ~~Use keyword arguments (named parameters)~~
-* :white_medium_square: Catch errors (eg item code not valid)
-* :white_medium_square: Extract a Basket class to ease Checkout from logic
-* :white_medium_square: Make a Promotion class all promotions would inherit from (DRY)
-* :white_medium_square: Work out total and subtotal dynamically
-
 ## Original Requirements
 
 Our client is an online marketplace, here is a sample of some of the products available on our site:
@@ -68,3 +60,11 @@ Total price expected: £36.95
 Basket: 001,002,001,003
 Total price expected: £73.76
 ```
+
+## Possible improvements
+* :white_check_mark: ~~Use BigDecimal to  avoid rounding imprecision~~
+* :white_check_mark: ~~Use keyword arguments (named parameters)~~
+* :white_medium_square: Catch errors (eg item code not valid)
+* :white_medium_square: Extract a Basket class to ease Checkout from logic
+* :white_medium_square: Make a Promotion class all promotions would inherit from (DRY)
+* :white_medium_square: Work out total and subtotal dynamically
